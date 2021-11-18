@@ -439,6 +439,19 @@ about us section
     .aboutUsKeyNote .summary {
         padding-top: 35px;
     }
+    .aboutItem .itemIcon {
+        height: 60px;
+    }
+    .itemIcon i {
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 510px) {
+    .aboutUsTabItem:last-child {
+        grid-column: 1/-1;
+        width: 165px;
+        justify-self: center;
+    }
 }
 /* ============================================
 about us section ends
@@ -475,11 +488,6 @@ number section ends
         justify-self: center !important;
     }
 }
-@media (max-width: 75px) {
-    .numberItem {
-        justify-self: start !important;
-    }
-}
 
 .number {
     font-size: 30px;
@@ -493,6 +501,7 @@ number section ends
 }
 
 .numberItem p {
+    font-family: 'Montserrat', sans-serif;
     margin-bottom: 0;
     color: #fff;
     font-weight: 500;
@@ -524,8 +533,19 @@ number section ends
 }
 @media screen and (max-width: 768px) {
     .numberItems {
+        justify-self: start !important;
         grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-        gap: 15px;
+        column-gap: 15px;
+        row-gap: 40px;
+    }
+    .numberItem {
+        gap: 10px;
+    }
+    .number {
+        font-size: 24px;
+    }
+    .check-square {
+        column-count: 1;
     }
 }
 /* ============================================
@@ -558,6 +578,8 @@ services section
         padding: 60px 0;
     }
     .serviceItem {
+        grid-template-columns: 50px 1fr;
+        grid-template-rows: 50px 1fr;
         row-gap: 15px;
     }
 }
