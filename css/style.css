@@ -198,6 +198,9 @@ feature-section
         padding-top: 10px;
         padding-bottom: 20px;
     }
+    .headingWithUnderline {
+        font-size: 24px;
+    }
 }
 
 /* ============================================
@@ -908,3 +911,254 @@ affiliation section
 /* ============================================
 affiliation section ends
 ===============================================*/
+
+/* ============================================
+CONTACT INFO
+===============================================*/
+
+.contactInfo {
+    padding: 130px 0;
+}
+@media screen and (min-width: 1400px) {
+    .contactInfo {
+        background: url(../images/background/headset-and-clip2.jpg);
+        background-repeat: no-repeat;
+        background-position: left center;
+    }
+}
+
+.contactForm {
+    padding-top: 50px;
+}
+
+.contactForm input {
+    border: 1px solid #ddd;
+    width: 100%;
+    min-height: 45px;
+    padding: 0 10px;
+    margin-bottom: 20px;
+}
+
+.contactForm input:focus {
+    outline: 0;
+}
+
+.contactForm textarea {
+    width: 100%;
+    height: 170px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.contactForm input[type="submit"] {
+    background: #ff7200;
+    color: #fff;
+    display: inline-block;
+    max-width: 170px;
+    transition: all .3s;
+}
+
+.contactForm input[type="submit"]:hover {
+    background: #000;
+}
+
+.contactForm textarea:focus {
+    outline: 0;
+}
+
+
+.contactInfoItems {
+    padding-top: 50px;
+    display: grid;
+    gap: 45px;
+}
+
+.contactInfoItem {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    align-items: center;
+}
+
+
+.contactInfoItem h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.contactInfoItem p {
+    margin: 0;
+}
+
+.contactInfoItem .itemIcon {
+    height: 60px;
+    width: 60px;
+}
+
+.contactInfoItem .itemIcon i {
+    font-size: 20px;
+}
+@media screen and (max-width: 768px) {
+    .contactInfo {
+        padding: 60px 0;
+    }
+}
+/* ============================================
+CONTACT INFO End
+===============================================*/
+
+/* ============================================
+Map area 
+===============================================*/
+
+.mapArea {
+    height: 160px;
+    background-image: url(../images/background/map.jpg);
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mapArea h3{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+/* ============================================
+Map area  end
+===============================================*/
+/* ============================================
+Footer section
+===============================================*/
+
+
+.footer-top {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background: #1a1a1a;
+    color: #999999;
+}
+
+.footer-title {
+    font-size: 16px;
+    color: #fff;
+    font-weight: 400;
+    border-bottom: 1px solid #5a5a5a;
+    padding-bottom: 10px;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.footer-title::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 30px;
+    height: 3px;
+    background: #ff7200;
+}
+
+.footer-menu {
+    list-style: none;
+    color: #fff;
+    padding: 0;
+    column-count: 2;
+}
+
+.footer-menu li {
+    margin-bottom: 10px;
+}
+.footer-menu li a{
+    color: #999999;
+}
+
+.footer-menu li a:hover{
+    color: #ff7200;
+}
+
+form.news-letter {
+    border: 1px solid #5a5a5a;
+    padding: 0;
+}
+
+form.news-letter button {
+    color: #5a5a5a;
+    padding: 8px 8px;
+}
+
+form.news-letter button:hover {
+    color: #fff;
+}
+
+form.news-letter input {
+    border: none;
+    background: transparent;
+    padding: 5px;
+    min-height: 44px;
+    border-radius: 0;
+    width: calc(100% - 40px);
+    color: #fff;
+}
+
+form.news-letter input:focus{
+    outline: 0;
+}
+.footerBottomItem {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.social-media {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+}
+
+.social-media li a{
+    color: #ddd;
+    font-size: 15px;
+}
+
+.social-media li a:hover{
+    color: #ff7200;
+}
+
+.footer-bottom {
+    background: #000;
+    /* color: #fff; */
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.footer-bottom p{
+    margin: 0;
+}
+
+.footer-bottom p::after {
+    font-family: "Font Awesome 5 Free";
+    content: '\f590';
+}
+@media screen and (max-width: 768px) {
+    .footer-top {
+        padding-top: 60px;
+        padding-bottom: 40px;
+    }
+    .footerBottomItem {
+        justify-content: center;
+    }
+}
+
+/* ============================================
+Footer End
+===============================================*/
+
