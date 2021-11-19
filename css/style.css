@@ -2,7 +2,7 @@ body {
     font-family: 'Raleway', sans-serif;
     color: #808080;
     font-size: 14px;
-    line-height: 1.75;
+    line-height: 2.115;
     overflow-x: hidden;
 }
 h1,
@@ -30,10 +30,78 @@ strong {
 /*--------------------------------------------------------------
  header section
 --------------------------------------------------------------*/
+/*--------------------------------------------------------------
+ header section
+--------------------------------------------------------------*/
 .navbar-nav {
     align-items: center;
     gap: 20px;
 }
+
+.header .navbar {
+    padding: 0;
+}
+
+.navbar-nav .nav-item {
+    margin: 0 18px;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.header {
+    background: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+    border-bottom: 1px solid rgba(255,255,255,.15);
+    padding-top: 30px;
+    transition: all .3s;
+}
+
+header.header.header-fixed {
+    background: #fff;
+    box-shadow: 0 10px 10px -10px rgb(0 0 0 / 35%);
+    transform: translateY(-31px);
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #fff;
+    padding: 35px 0;
+    display: inline-block;
+    transition: color .3s;
+    position: relative;
+}
+
+.navbar-dark .navbar-nav .nav-link:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 3px;
+    background: #ff7200;
+    opacity: 0;
+    transition: opacity .3s;
+}
+.navbar-dark .navbar-nav .nav-link:hover:after {
+    opacity: 1;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #ff7200;
+    padding: 35px 0;
+    display: inline-block;
+}
+.header.header-fixed .navbar-dark .navbar-nav .nav-link {
+    color: #000;
+}
+
+/*--------------------------------------------------------------
+end header section
+--------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
 end header section
@@ -273,7 +341,7 @@ feature-section
 }
 
 .featured-key-note > p:not(:last-child) {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 .featured-key-note > p:last-child {
     margin-bottom: 0;
@@ -283,9 +351,7 @@ feature-section
     padding-top: 30px;
     padding-bottom: 50px;
 }
-.featured-key-note p {
-    font-size: 13px;
-}
+
 @media screen and (max-width: 768px) {
     .featuredSection {
         padding-top: 60px;
@@ -310,7 +376,7 @@ feature-section ends
 button style
 ===============================================*/
 .btnPrimary {
-    width: 170px;
+    min-width: 170px;
     border-radius: 0;
     font-size: 13px;
     background: #ff7200;
@@ -325,7 +391,7 @@ button style
     background: #ef6c00;
 }
 .btnSecondary {
-    width: 170px;
+    min-width: 170px;
     font-size: 13px;
     border-radius: 0;
     border: 1px solid #d4d4d4;
@@ -362,6 +428,11 @@ video section
     align-items: center;
     justify-content: center;
     flex-flow: column;
+}
+.video-section h3 {
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
 
