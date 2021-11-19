@@ -1,7 +1,8 @@
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Raleway', sans-serif;
     color: #808080;
     font-size: 14px;
+    line-height: 1.75;
     overflow-x: hidden;
 }
 h1,
@@ -11,11 +12,10 @@ h4,
 h5,
 h6,
 strong {
+    font-family: 'Montserrat', sans-serif;
     color: #444444;
 }
-p {
-    font-family: 'Raleway', sans-serif;
-}
+
 @media (min-width: 1200px) {
     .container {
         max-width: 1170px;
@@ -114,7 +114,7 @@ end header section
 
 .slider-text .slider-heading {
     font-size: 3rem;
-    margin-bottom: 45px;
+    margin-bottom: 42px;
     line-height: 1.2;
     font-weight: 700;
     color: #fff;
@@ -168,7 +168,7 @@ feature tab section
     position: relative;
 }
 .featuredTabNav > li > a {
-    padding: 45px 0 55px;
+    padding: 44px 0;
     text-transform: uppercase;
     color: #444444;
     transition: all 100ms ease-in-out;
@@ -198,6 +198,9 @@ feature tab section
 }
 .featuredServiceText p {
     margin-bottom: 50px;
+}
+.featuredServiceText .btnPrimary {
+    padding: 14px 32px;
 }
 @media screen and (max-width: 1200px) {
     .featuredTabNav > li > a {
@@ -264,7 +267,7 @@ feature-section
 
 .featured-sub-title h3 {
     margin-bottom: 35px;
-    font-size: 16px;
+    font-size: 14px;
     text-transform: uppercase;
     font-weight: 600;
 }
@@ -272,10 +275,16 @@ feature-section
 .featured-key-note > p:not(:last-child) {
     margin-bottom: 20px;
 }
+.featured-key-note > p:last-child {
+    margin-bottom: 0;
+}
 
 .featured-key-note {
-    padding-top: 35px;
+    padding-top: 30px;
     padding-bottom: 50px;
+}
+.featured-key-note p {
+    font-size: 13px;
 }
 @media screen and (max-width: 768px) {
     .featuredSection {
@@ -301,12 +310,14 @@ feature-section ends
 button style
 ===============================================*/
 .btnPrimary {
+    width: 170px;
     border-radius: 0;
+    font-size: 13px;
     background: #ff7200;
     color: white;
     padding: 12px 30px;
     text-transform: uppercase;
-    letter-spacing: 2.2px;
+    letter-spacing: 2px;
     transition: all 300ms ease-in-out;
 }
 .btnPrimary:hover {
@@ -314,11 +325,13 @@ button style
     background: #ef6c00;
 }
 .btnSecondary {
+    width: 170px;
+    font-size: 13px;
     border-radius: 0;
     border: 1px solid #d4d4d4;
     padding: 12px 30px;
     text-transform: uppercase;
-    letter-spacing: 2.2px;
+    letter-spacing: 1.5px;
     transition: all 300ms ease-in-out;
 }
 .btnSecondary:hover {
@@ -577,6 +590,7 @@ number section ends
     font-size: 45px;
     font-weight: 500;
     color: #fff;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .icon i {
