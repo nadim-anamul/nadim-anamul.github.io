@@ -101,14 +101,14 @@ end header section
 }
 @media (min-width: 1400px) {
     .slider-wrapper {
-        min-height: 920px;
+        height: 935px;
     }
 
     .slider-wrapper .item {
-        min-height: 920px;
+        height: 935px;
     }
     .slider-content {
-        min-height: 920px;
+        height: 935px;
     }
 }
 
@@ -180,7 +180,7 @@ feature tab section
     clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 75%, 50% 100%, 0 75%, 0% 75%);
 
 }
-.featuredTabNav > li > a.active {
+.featuredTabNav > li > a.active, .featuredTabNav > li > a:hover {
     color: #ffffff;
     background-color:#ff7200;
 }
@@ -258,7 +258,7 @@ feature-section
     left: 0;
     bottom: 0;
     width: 50px;
-    height: 2px;
+    height: 3px;
     background: #ff7200;
 }
 
