@@ -27,6 +27,17 @@ p {
 }
 
 /*--------------------------------------------------------------
+ header section
+--------------------------------------------------------------*/
+.navbar-nav {
+    align-items: center;
+    gap: 20px;
+}
+
+/*--------------------------------------------------------------
+end header section
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
 ##  Slider
 --------------------------------------------------------------*/
 .owl-dots {
@@ -141,6 +152,86 @@ p {
     }
 }
 
+/* ============================================
+feature tab section
+===============================================*/
+.featuredTabNav {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(140px,1fr));
+    gap: 30px;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+.featuredTabNav > li {
+    position: relative;
+}
+.featuredTabNav > li > a {
+    padding: 45px 0 55px;
+    text-transform: uppercase;
+    color: #444444;
+    transition: all 100ms ease-in-out;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    background-color: #dddddd;
+    font-size: 16px;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 75%, 50% 100%, 0 75%, 0% 75%);
+
+}
+.featuredTabNav > li > a.active {
+    color: #ffffff;
+    background-color:#ff7200;
+}
+
+.featuredTabNav > li > a>i {
+    font-size: 40px;
+}
+.featuredTabContent {
+    padding-top: 105px;
+}
+
+.featuredService {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.featuredServiceText p {
+    margin-bottom: 50px;
+}
+@media screen and (max-width: 1200px) {
+    .featuredTabNav > li > a {
+        padding: 25px 0 35px;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .featuredTabNav > li > a>i {
+        font-size: 24px;
+    }
+    .featuredTabNav > li > a {
+        padding: 30px 0 30px;
+        font-size: 14px;
+        gap: 15px;
+    }
+}
+@media screen and (max-width: 770px) {
+    .featuredService {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .featuredTabContent {
+        padding-top: 80px;
+    }
+    .featuredTabNav {
+        grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+        row-gap: 30px;
+        column-gap: 15px;
+
+    }
+}
+/* ============================================
+feature tab section
+===============================================*/
 /* ============================================
 feature-section
 ===============================================*/
@@ -779,7 +870,7 @@ projects section ends
     object-fit: cover;
 }
 .projectImg {
-    position:relative;
+    position: relative;
     cursor: pointer;
 }
 .projectImg:hover .projectText {
@@ -804,14 +895,14 @@ projects section ends
     margin-bottom: 40px;
 }
 
-.projectText .projectIcon>i {
+.projectText .projectIcon > i {
     padding: 10px;
     border: 1px solid #dddddd;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
 }
 
-.projectText .projectIcon>i:hover {
+.projectText .projectIcon > i:hover {
     background: #fff;
     color: #ff7200;
 }
@@ -822,7 +913,7 @@ projects section ends
     margin-bottom: 15px;
 }
 
-.projectText p>span {
+.projectText p > span {
     float: right;
 }
 
@@ -1004,22 +1095,21 @@ CONTACT INFO
     padding: 10px;
 }
 
-.contactForm input[type="submit"] {
+.contactForm input[type='submit'] {
     background: #ff7200;
     color: #fff;
     display: inline-block;
     max-width: 170px;
-    transition: all .3s;
+    transition: all 0.3s;
 }
 
-.contactForm input[type="submit"]:hover {
-    background: #000;
+.contactForm input[type='submit']:hover {
+    background: #ef6c00;
 }
 
 .contactForm textarea:focus {
     outline: 0;
 }
-
 
 .contactInfoItems {
     padding-top: 50px;
@@ -1032,7 +1122,6 @@ CONTACT INFO
     grid-template-columns: 100px 1fr;
     align-items: center;
 }
-
 
 .contactInfoItem h4 {
     font-size: 16px;
@@ -1075,7 +1164,7 @@ Map area
     align-items: center;
 }
 
-.mapArea h3{
+.mapArea h3 {
     color: #fff;
     text-transform: uppercase;
     font-size: 16px;
@@ -1087,7 +1176,6 @@ Map area  end
 /* ============================================
 Footer section
 ===============================================*/
-
 
 .footer-top {
     padding-top: 80px;
@@ -1106,7 +1194,7 @@ Footer section
     margin-bottom: 40px;
 }
 
-.footer-title::after{
+.footer-title::after {
     content: '';
     position: absolute;
     left: 0;
@@ -1126,11 +1214,11 @@ Footer section
 .footer-menu li {
     margin-bottom: 10px;
 }
-.footer-menu li a{
+.footer-menu li a {
     color: #999999;
 }
 
-.footer-menu li a:hover{
+.footer-menu li a:hover {
     color: #ff7200;
 }
 
@@ -1158,7 +1246,7 @@ form.news-letter input {
     color: #fff;
 }
 
-form.news-letter input:focus{
+form.news-letter input:focus {
     outline: 0;
 }
 .footerBottomItem {
@@ -1176,12 +1264,12 @@ form.news-letter input:focus{
     gap: 35px;
 }
 
-.social-media li a{
+.social-media li a {
     color: #ddd;
     font-size: 15px;
 }
 
-.social-media li a:hover{
+.social-media li a:hover {
     color: #ff7200;
 }
 
@@ -1192,12 +1280,12 @@ form.news-letter input:focus{
     align-items: center;
 }
 
-.footer-bottom p{
+.footer-bottom p {
     margin: 0;
 }
 
 .footer-bottom p::after {
-    font-family: "Font Awesome 5 Free";
+    font-family: 'Font Awesome 5 Free';
     content: '\f590';
 }
 @media screen and (max-width: 768px) {
@@ -1213,4 +1301,3 @@ form.news-letter input:focus{
 /* ============================================
 Footer End
 ===============================================*/
-
