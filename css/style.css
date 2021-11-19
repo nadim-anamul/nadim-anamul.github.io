@@ -86,6 +86,16 @@ header.header.header-fixed {
     opacity: 0;
     transition: opacity .3s;
 }
+.navbar-dark .navbar-nav .nav-link {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+.navbar-dark .navbar-nav .active .nav-link {
+    color: #ff7200;
+}
+.navbar-dark .navbar-nav .active .nav-link:after {
+    opacity: 1;
+}
 .navbar-dark .navbar-nav .nav-link:hover:after {
     opacity: 1;
 }
@@ -180,6 +190,7 @@ end header section
     }
 }
 
+
 .slider-text .slider-heading {
     font-size: 3rem;
     margin-bottom: 42px;
@@ -209,7 +220,14 @@ end header section
 .slider-text {
     text-align: center;
 }
-
+@media (min-width: 1000px) {
+    .slider-text .slider-heading {
+        margin-bottom: 30px;
+    }
+    .slider-text p {
+        margin-bottom: 30px;
+    }
+}
 @media screen and (max-width: 768px) {
     .slider-text .slider-heading {
         font-size: 2rem;
@@ -295,9 +313,16 @@ feature tab section
         padding-top: 80px;
     }
     .featuredTabNav {
-        row-gap: 30px;
+        row-gap: 20px;
         column-gap: 15px;
-
+    }
+    .featuredTabNav > li > a>i {
+        font-size: 20px;
+    }
+    .featuredTabNav > li > a {
+        padding: 20px 0;
+        font-size: 13px;
+        gap: 15px;
     }
 }
 /* ============================================
@@ -504,7 +529,7 @@ about us section
     height: calc(100% - 2px);
     display: flex;
     align-items: center;
-    justify-content: center;
+    padding-left: 15px;
     background-color: white;
     clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
     transition: all 300ms ease-in-out;
@@ -751,6 +776,9 @@ services section
         grid-template-rows: 50px 1fr;
         row-gap: 15px;
     }
+    .serviceItem .itemIcon i {
+        padding-left: 12px;
+    }
 }
 /* ============================================
 services section ends
@@ -849,7 +877,7 @@ why chose us section ends
 }
 .whyChoseItemIcon {
     display: flex;
-    justify-content: center;
+    padding-left: 10px;
     height: calc(100% + 1px);
     width: 100%;
     align-items: center;
@@ -1217,10 +1245,22 @@ CONTACT INFO
 
 .contactInfoItem .itemIcon i {
     font-size: 20px;
+
 }
 @media screen and (max-width: 768px) {
     .contactInfo {
         padding: 60px 0;
+    }
+    .contactInfoItem .itemIcon {
+        height: 50px;
+        width: 50px;
+    }
+    .contactInfoItem {
+        grid-template-columns: 70px 1fr;
+    }
+    .contactInfoItem .itemIcon i {
+        font-size: 18px;
+        padding-left: 12px;
     }
 }
 /* ============================================
