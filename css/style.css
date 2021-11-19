@@ -108,6 +108,48 @@ header.header.header-fixed {
 .header.header-fixed .navbar-dark .navbar-nav .nav-link {
     color: #000;
 }
+@media screen and (max-width: 991px) {
+
+    .header {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border: none;
+    }
+    .navbar-dark .navbar-nav .nav-link {
+        color: #000!important;
+    }
+    .navbar-collapse {
+        background: #fff;
+    }
+    .navbar-dark .navbar-nav .nav-link {
+        padding: 8px 0;
+        font-size: 12px;
+    }
+    .navbar-nav {
+        align-items: flex-start;
+        gap: 0;
+        padding: 10px 0;
+    }
+    .header.header-fixed {
+        transform: translateY(0);
+    }
+    span.navbar-toggler-icon i {
+        font-size: 40px;
+        color: #fff;
+    }
+    .navbar-dark .navbar-toggler-icon {
+        background-image: none;
+    }
+    .navbar-toggler {
+        padding: 0 14px;
+        border: none;
+        padding-bottom: 5px;
+    }
+    .header.header-fixed .navbar-toggler-icon i {
+        font-size: 40px;
+        color: #ff7200;
+    }
+}
 
 /*--------------------------------------------------------------
 end header section
