@@ -301,6 +301,7 @@ feature tab section
     position: relative;
 }
 .featuredTabNav > li > a {
+    font-family: 'Montserrat', sans-serif;
     padding: 44px 0;
     text-transform: uppercase;
     color: #444444;
