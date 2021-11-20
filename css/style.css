@@ -1,9 +1,9 @@
 body {
     font-family: 'Raleway', sans-serif;
-    color: #808080;
+    color: #787878;
     font-size: 14px;
     line-height: 30px;
-    letter-spacing: 0.4px;
+    letter-spacing: 0.42px;
     font-weight: 400;
     overflow-x: hidden;
 }
@@ -16,7 +16,7 @@ h6,
 strong {
     font-family: 'Montserrat', sans-serif;
     color: #444444;
-    letter-spacing: 0.8px;
+    text-transform: uppercase;
 }
 
 @media (min-width: 1200px) {
@@ -28,6 +28,28 @@ strong {
     .container {
         max-width: 1200px;
     }
+}
+
+.featured-title {
+    margin-bottom: 60px;
+    position: relative;
+}
+.headingWithUnderline {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(218, 218, 218, 0.5);
+    text-transform: uppercase;
+}
+.headingWithUnderline::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 3px;
+    background: #ff7200;
 }
 
 /*--------------------------------------------------------------
@@ -167,6 +189,118 @@ end header section
 /*--------------------------------------------------------------
 ##  Slider
 --------------------------------------------------------------*/
+@media (min-width: 1500px) {
+    .slider-wrapper {
+        height: 935px;
+    }
+
+    .slider-wrapper .item {
+        height: 935px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: relative;
+        z-index: 1;
+    }
+    .slider-content {
+        padding-top: 432px;
+        padding-bottom: 265px;
+    }
+    .slider-content .slider-heading {
+        font-size: 60px;
+        margin-bottom: 33px;
+        font-weight: 700;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        line-height: 1;
+    }
+    .slider-content .btnPrimary {
+        width: 170px;
+    }
+    .slider-content p {
+        margin-bottom: 62px;
+        font-size: 18px;
+        color: #fff;
+        text-transform: capitalize;
+    }
+    .slider-content .btnPrimary {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        margin-left: auto;
+        margin-right: auto;
+        height: 52px;
+    }
+    .slider-wrapper .owl-dots {
+        bottom: 58px;
+    }
+}
+@media (max-width: 1499px) {
+    .slider-wrapper {
+        min-height: 100vh;
+    }
+    .slider-wrapper .item {
+        min-height: 100vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: relative;
+        z-index: 1;
+    }
+
+    .slider-wrapper .item::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        opacity: 0.1;
+        z-index: -1;
+    }
+
+    .slider-content {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .slider-content .slider-heading {
+        font-size: 60px;
+        margin-bottom: 42px;
+        font-weight: 700;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 2.2px;
+    }
+
+    .slider-content p {
+        font-size: 18px;
+        color: #fff;
+        font-weight: 400;
+        margin-bottom: 70px;
+        text-transform: capitalize;
+    }
+    .btnPrimary {
+        min-width: 170px;
+        border-radius: 0;
+        font-size: 13px;
+        background: #ff7200;
+        color: white;
+        padding: 12px 30px;
+        text-transform: uppercase;
+        letter-spacing: 2.4px;
+        transition: all 300ms ease-in-out;
+    }
+    .slider-wrapper .owl-dots {
+        bottom: 46px;
+    }
+}
 .owl-dots {
     text-align: center;
     padding-top: 25px;
@@ -178,81 +312,20 @@ end header section
     padding: 5px;
     font: inherit;
     margin: 0 8px;
-    width: 12px;
-    height: 12px;
+    width: 10px;
+    height: 10px;
 }
 
 .slider-wrapper .owl-dots {
     text-align: center;
     position: absolute;
     width: 100%;
-    bottom: 46px;
 }
 
 .owl-carousel button.owl-dot.active {
     opacity: 1;
     background: #ff7200;
     border: 1px solid #ff7200;
-}
-.slider-wrapper {
-    min-height: 100vh;
-}
-
-.slider-wrapper .item {
-    min-height: 100vh;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    position: relative;
-    z-index: 1;
-}
-
-.slider-wrapper .item::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: #000;
-    opacity: 0.1;
-    z-index: -1;
-}
-
-.slider-content {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-@media (min-width: 1400px) {
-    .slider-wrapper {
-        height: 935px;
-    }
-
-    .slider-wrapper .item {
-        height: 935px;
-    }
-    .slider-content {
-        height: 935px;
-    }
-}
-
-.slider-text .slider-heading {
-    font-size: 60px;
-    margin-bottom: 42px;
-    font-weight: 700;
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 0.8px;
-}
-
-.slider-text p {
-    font-size: 18px;
-    color: #fff;
-    font-weight: 400;
-    margin-bottom: 70px;
-    text-transform: capitalize;
 }
 
 .owl-carousel .owl-item .slider-img img {
@@ -263,23 +336,26 @@ end header section
 .slider-one {
     background: url(../images/slider.jpg);
 }
-.slider-text {
+.slider-content {
     text-align: center;
 }
-@media (min-width: 1000px) {
-    .slider-text .slider-heading {
+
+@media (max-width: 1000px) {
+    .slider-content .slider-heading {
         margin-bottom: 30px;
+        letter-spacing: 1.2px;
     }
-    .slider-text p {
+    .slider-content p {
         margin-bottom: 30px;
     }
 }
 @media screen and (max-width: 768px) {
-    .slider-text .slider-heading {
+    .slider-content .slider-heading {
         font-size: 2rem;
         margin-bottom: 35px;
+        letter-spacing: 1.2px;
     }
-    .slider-text p {
+    .slider-content p {
         font-size: 1rem;
         margin-bottom: 40px;
     }
@@ -301,23 +377,24 @@ feature tab section
 }
 .featuredTabNav > li > a {
     font-family: 'Montserrat', sans-serif;
-    padding: 44px 0;
+    font-weight: 500;
+    padding: 40px 0 50px;
     text-transform: uppercase;
     color: #444444;
     transition: all 100ms ease-in-out;
     display: flex;
     flex-direction: column;
-    gap: 25px;
-    background-color: #dddddd;
+    gap: 20px;
+    background-color: #eeeeee;
     font-size: 16px;
     clip-path: polygon(
         0% 0%,
         100% 0%,
-        100% 75%,
-        100% 75%,
+        100% 68%,
+        100% 68%,
         50% 100%,
-        0 75%,
-        0% 75%
+        0 68%,
+        0% 68%
     );
 }
 .featuredTabNav > li > a.active,
@@ -338,19 +415,27 @@ feature tab section
     grid-template-columns: 1fr 1fr;
 }
 .featuredServiceText p {
-    margin-bottom: 50px;
-    letter-spacing: 0.4px;
+    margin-bottom: 40px;
+    letter-spacing: 0.8px;
 }
 .featuredServiceText h2 {
     font-size: 24px;
+    padding-bottom: 26px;
+}
+.featuredServiceText .featured-title {
+    margin-bottom: 47px;
 }
 .featuredServiceText .btnPrimary {
-    padding: 14px 32px;
+    padding: 14px 30px;
 }
 
 @media screen and (min-width: 1200px) {
     .featuredServiceText {
-        padding-right: 15px;
+        padding-right: 30px;
+    }
+    .featuredServiceImg {
+        margin-left: -22px;
+        margin-top: -2px;
     }
 }
 @media screen and (max-width: 1200px) {
@@ -389,8 +474,11 @@ feature tab section
         font-size: 13px;
         gap: 15px;
     }
+    .featuredServiceText h2 {
+        font-size: 20px;
+    }
 }
-@media screen and (min-width:540px) and (max-width:767px) {
+@media screen and (min-width: 540px) and (max-width: 767px) {
     .featuredTabNav {
         grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
     }
@@ -406,50 +494,44 @@ feature tab section
 feature-section
 ===============================================*/
 .featuredSection {
-    padding-top: 70px;
-    padding-bottom: 120px;
+    padding-top: 117px;
+    padding-bottom: 125px;
 }
 
-.featured-title {
-    margin-bottom: 60px;
-    position: relative;
+.featuredSection> .featured-title {
+    margin-bottom: 56px;
 }
 .headingWithUnderline {
-    position: relative;
-    display: inline-block;
-    margin: 0;
-    padding-bottom: 30px;
-    border-bottom: 1px solid rgba(218, 218, 218, 0.5);
-    text-transform: uppercase;
-}
-.headingWithUnderline::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 50px;
-    height: 3px;
-    background: #ff7200;
+    padding-bottom: 25px;
+    letter-spacing: -.8px;
 }
 
 .featured-sub-title h3 {
-    margin-bottom: 35px;
+    margin-bottom: 22px;
     font-size: 16px;
     text-transform: uppercase;
     font-weight: 600;
-    line-height: 24px;
+    line-height: 1;
 }
 
 .featured-key-note > p:not(:last-child) {
-    margin-bottom: 10px;
+    margin-bottom: 0;
 }
 .featured-key-note > p:last-child {
     margin-bottom: 0;
 }
 
 .featured-key-note {
-    padding-top: 26px;
-    padding-bottom: 35px;
+    padding-top: 13px;
+    padding-bottom: 44px;
+}
+.featured-image img {
+    max-height: 338px;
+    object-fit: cover;
+}
+.featured-item .owl-dots {
+    text-align: center;
+    padding-top: 18px;
 }
 
 @media screen and (max-width: 768px) {
@@ -465,7 +547,7 @@ feature-section
         padding-bottom: 20px;
     }
     .headingWithUnderline {
-        font-size: 24px;
+        font-size: 22px;
     }
 }
 
@@ -534,6 +616,7 @@ video section
     font-weight: 600;
     text-transform: uppercase;
     margin: 0;
+    letter-spacing: 1px;
 }
 
 .video-section a {
@@ -541,7 +624,8 @@ video section
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 50px;
+    margin-bottom: 43px;
+    margin-top: 75px;
 }
 .video-section a:hover {
     text-decoration: none;
@@ -563,19 +647,15 @@ video section ends
 about us section
 ===============================================*/
 .aboutUs {
-    padding: 130px 0;
+    padding: 133px 0 90px;
 }
 
 .aboutItems {
     padding-top: 50px;
     display: grid;
-    gap: 60px;
+    gap: 55px;
 }
-.aboutImage {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 
 .aboutItem {
     display: grid;
@@ -616,12 +696,12 @@ about us section
     background: #ff7200;
 }
 .aboutItem .itemIcon i {
-    padding-left: 20px;
+    padding-left: 22px;
 }
 .aboutItemText h4 {
     font-size: 16px;
     margin-bottom: 25px;
-    line-height: 24px;
+    line-height: 1;
 }
 
 .aboutItemText p {
@@ -634,12 +714,15 @@ about us section
 }
 
 .aboutUsKeyNote .summary {
-    padding-top: 50px;
+    padding-top: 44px;
+}
+.summary p {
+    margin-bottom: 6px;
 }
 
 .skills-progress h6 {
     font-size: 13px;
-    margin-bottom: 18px;
+    margin-bottom: 13px;
 }
 .skills-progress h6 span {
     float: right;
@@ -666,7 +749,7 @@ about us section
 .aboutUsTabItem {
     font-family: 'Montserrat', sans-serif;
     text-align: center;
-    padding: 10px 0 20px;
+    padding: 8px 0 20px;
     background-color: #dddddd;
     color: #444444;
     position: relative;
@@ -692,7 +775,11 @@ about us section
 
 @media screen and (min-width: 1300px) {
     .skills-progress {
-        padding-left: 15px;
+        padding-left: 24px;
+    }
+    .aboutImage {
+        padding-left: 160px;
+        padding-top: 4px;
     }
 }
 @media screen and (max-width: 768px) {
@@ -767,14 +854,12 @@ number section ends
     font-size: 45px;
     font-weight: 500;
     color: #fff;
-    line-height: 2;
     letter-spacing: 0.8px;
 }
 
 .numberItem .icon i {
     font-size: 30px;
     color: #ff7200;
-    line-height: 2.4;
 }
 
 .numberItem p {
@@ -812,7 +897,7 @@ number section ends
 @media screen and (max-width: 768px) {
     .numberItems {
         justify-self: start !important;
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         column-gap: 15px;
         row-gap: 40px;
     }
@@ -825,6 +910,10 @@ number section ends
     .check-square {
         column-count: 1;
     }
+    .numberItem .icon i {
+        font-size: 24px;
+        color: #ff7200;
+    }
 }
 /* ============================================
 number section ends
@@ -833,7 +922,7 @@ number section ends
 services section
 ===============================================*/
 .serviceSection {
-    padding: 130px 0;
+    padding: 130px 0 40px;
 }
 .serviceItem {
     display: grid;
@@ -847,14 +936,12 @@ services section
 .itemText h4 {
     margin: 0;
     font-size: 16px;
-    line-height: 3.75;
 }
 .serviceItem > p {
     grid-column: 1/-1;
 }
 .serviceItem .itemIcon i {
     font-size: 26px;
-    line-height: 2.5;
 }
 @media screen and (max-width: 768px) {
     .serviceSection {
@@ -891,7 +978,7 @@ team section ends
     top: 50%;
     transform: translateY(-50%);
     width: 86%;
-    background-color: rgb(255 114 0 / 80%);
+    background-color: rgb(255 114 0 / 90%);
     left: 7%;
     padding: 20px;
     color: #fff;
@@ -902,13 +989,11 @@ team section ends
     color: #fff;
     margin-bottom: 0;
     font-size: 16px;
-    line-height: 1.5;
 }
 
 .memberInfo p {
     font-size: 14px;
     margin-bottom: 40px;
-    line-height: 1.7;
 }
 
 .social i {
@@ -954,12 +1039,9 @@ team section ends
 why chose us section ends
 ===============================================*/
 .whyChoseSection {
-    padding: 140px 0;
+    padding: 130px 0 95px;
 }
-.whyChoseImg {
-    display: flex;
-    justify-content: center;
-}
+
 .whyChoseItem {
     border: 1px solid #dddddd;
     margin-bottom: 20px;
@@ -997,10 +1079,16 @@ why chose us section ends
     color: #444444;
 }
 .whyChoseItemText {
-    padding: 20px;
+    padding: 12px 20px 20px;
 }
 .whyChoseHeading h4 {
     font-size: 13px;
+}
+@media screen and (min-width: 1300px) {
+    .whyChoseImg {
+        padding-left: 84px;
+        padding-top: 8px;
+    }
 }
 @media screen and (max-width: 768px) {
     .whyChoseSection {
@@ -1038,8 +1126,7 @@ projects section ends
 .projectFilterNav > li > a {
     font-family: 'Montserrat', sans-serif;
     font-size: 13px;
-    line-height: 1.84;
-    padding: 22px 0;
+    padding: 15px 0;
     text-transform: uppercase;
     color: #444444;
     transition: all 100ms ease-in-out;
@@ -1054,6 +1141,11 @@ projects section ends
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 10px;
+}
+@media (min-width: 1400px) {
+    .projectFilterNav {
+        margin-left: 63px;
+    }
 }
 @media (min-width: 1000px) {
     .projectImages {
@@ -1167,13 +1259,13 @@ review section ends
 @media screen and (min-width: 1200px) {
     .testimonial {
         padding: 0 100px;
+        padding-top: 34px;
     }
 }
 .quoteIcon {
     display: flex;
     width: 85px;
-    height: 78px;
-    background-color: rgb(255 255 255 / 5%);
+    height: 67px;
     margin-bottom: 70px;
     position: relative;
     border-bottom: none;
@@ -1182,35 +1274,37 @@ review section ends
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    clip-path: polygon(
-        0% 0%,
-        100% 0%,
-        100% 85%,
-        100% 85%,
-        50% 100%,
-        0 85%,
-        0% 85%
-    );
+
+    border: 1px solid #979089;
+    border-bottom: none;
+    position: relative;
+}
+.quoteIcon:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 44px;
+    height: 0.5px;
+    background: #979089;
+    transform: rotate(16deg);
+    transform-origin: left;
+}
+.quoteIcon::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 44px;
+    height: 0.5px;
+    background: #979089;
+    transform: rotate(-16deg);
+    transform-origin: right;
 }
 
 .quoteIcon i {
-    display: flex;
-    width: calc(100% - 2px);
-    height: calc(100% - 2px);
     font-size: 36px;
     color: #ffffff;
-    background-color: rgb(255 255 255 / 0%);
-    clip-path: polygon(
-        0% 0%,
-        100% 0%,
-        100% 85%,
-        100% 85%,
-        50% 100%,
-        0 85%,
-        0% 85%
-    );
-    justify-content: center;
-    align-items: center;
 }
 
 .testimonialText {
@@ -1232,7 +1326,7 @@ review section ends
 
 @media screen and (max-width: 768px) {
     .reviewSection {
-        min-height: 460px;
+        min-height: 560px;
     }
     .quoteIcon {
         margin-bottom: 40px;
@@ -1248,7 +1342,7 @@ review section ends
 affiliation section 
 ===============================================*/
 .affiliationSection {
-    padding: 140px 0;
+    padding: 185px 0;
     background-color: #eeeeee;
 }
 
@@ -1290,7 +1384,7 @@ CONTACT INFO
 ===============================================*/
 
 .contactInfo {
-    padding: 130px 0;
+    padding: 143px 0 108px;
 }
 @media screen and (min-width: 1400px) {
     .contactInfo {
@@ -1304,7 +1398,7 @@ CONTACT INFO
 }
 
 .contactForm {
-    padding-top: 50px;
+    padding-top: 60px;
 }
 
 .contactForm input {
@@ -1333,6 +1427,7 @@ CONTACT INFO
     display: inline-block;
     max-width: 170px;
     transition: all 0.3s;
+    margin-top: -10px;
 }
 
 .contactForm input[type='submit']:hover {
@@ -1344,7 +1439,7 @@ CONTACT INFO
 }
 
 .contactInfoItems {
-    padding-top: 50px;
+    padding-top: 63px;
     display: grid;
     gap: 45px;
 }
@@ -1392,6 +1487,9 @@ CONTACT INFO
         font-size: 18px;
         padding-left: 12px;
     }
+    .contactInfo .headingWithUnderline {
+        font-size: 20px;
+    }
 }
 /* ============================================
 CONTACT INFO End
@@ -1426,14 +1524,14 @@ Footer section
 
 .footer-top {
     padding-top: 80px;
-    padding-bottom: 80px;
+    padding-bottom: 60px;
     background: #1a1a1a;
     color: #999999;
 }
 
 .footer-title {
     font-size: 16px;
-    color: #fff;
+    color: #dddddd;
     font-weight: 400;
     border-bottom: 1px solid #5a5a5a;
     padding-bottom: 10px;
@@ -1459,7 +1557,7 @@ Footer section
 }
 
 .footer-menu li {
-    margin-bottom: 10px;
+    margin-bottom: 0;
 }
 .footer-menu li a {
     color: #999999;
@@ -1475,7 +1573,7 @@ form.news-letter {
 }
 
 form.news-letter button {
-    color: #5a5a5a;
+    color: #797979;
     padding: 8px 8px;
 }
 
@@ -1515,7 +1613,9 @@ form.news-letter input:focus {
     color: #ddd;
     font-size: 15px;
 }
-
+.social-media li a i {
+    color: #ddd;
+}
 .social-media li a:hover {
     color: #ff7200;
 }
