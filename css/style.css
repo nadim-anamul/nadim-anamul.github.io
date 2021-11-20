@@ -241,7 +241,6 @@ end header section
 .slider-text .slider-heading {
     font-size: 60px;
     margin-bottom: 42px;
-    line-height: 60px;
     font-weight: 700;
     color: #fff;
     text-transform: uppercase;
@@ -348,6 +347,7 @@ feature tab section
 .featuredServiceText .btnPrimary {
     padding: 14px 32px;
 }
+
 @media screen and (min-width: 1200px) {
     .featuredServiceText {
         padding-right: 15px;
@@ -388,6 +388,15 @@ feature tab section
         padding: 20px 0;
         font-size: 13px;
         gap: 15px;
+    }
+}
+@media screen and (min-width:540px) and (max-width:767px) {
+    .featuredTabNav {
+        grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    }
+    .featuredTabNav > li > a {
+        padding: 25px 0;
+        gap: 20px;
     }
 }
 /* ============================================
