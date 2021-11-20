@@ -2,7 +2,9 @@ body {
     font-family: 'Raleway', sans-serif;
     color: #808080;
     font-size: 14px;
-    line-height: 2.115;
+    line-height: 30px;
+    letter-spacing: 0.4px;
+    font-weight: 400;
     overflow-x: hidden;
 }
 h1,
@@ -14,6 +16,7 @@ h6,
 strong {
     font-family: 'Montserrat', sans-serif;
     color: #444444;
+    letter-spacing: 0.8px;
 }
 
 @media (min-width: 1200px) {
@@ -56,22 +59,21 @@ strong {
     left: 0;
     z-index: 99;
     width: 100%;
-    border-bottom: 1px solid rgba(255,255,255,.15);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
     padding-top: 30px;
-    transition: all .3s;
+    transition: all 0.3s;
 }
 
 header.header.header-fixed {
     background: #fff;
     box-shadow: 0 10px 10px -10px rgb(0 0 0 / 35%);
-    transform: translateY(-31px);
 }
 
 .navbar-dark .navbar-nav .nav-link {
     color: #fff;
     padding: 35px 0;
     display: inline-block;
-    transition: color .3s;
+    transition: color 0.3s;
     position: relative;
 }
 
@@ -84,7 +86,7 @@ header.header.header-fixed {
     height: 3px;
     background: #ff7200;
     opacity: 0;
-    transition: opacity .3s;
+    transition: opacity 0.3s;
 }
 .navbar-dark .navbar-nav .nav-link {
     font-family: 'Montserrat', sans-serif;
@@ -108,15 +110,19 @@ header.header.header-fixed {
 .header.header-fixed .navbar-dark .navbar-nav .nav-link {
     color: #000;
 }
+@media screen and (min-width: 1000px) {
+    header.header.header-fixed {
+        transform: translateY(-30px);
+    }
+}
 @media screen and (max-width: 991px) {
-
     .header {
         padding-top: 10px;
         padding-bottom: 10px;
         border: none;
     }
     .navbar-dark .navbar-nav .nav-link {
-        color: #000!important;
+        color: #000 !important;
     }
     .navbar-collapse {
         background: #fff;
@@ -232,19 +238,18 @@ end header section
     }
 }
 
-
 .slider-text .slider-heading {
-    font-size: 3rem;
+    font-size: 60px;
     margin-bottom: 42px;
-    line-height: 1.2;
+    line-height: 60px;
     font-weight: 700;
     color: #fff;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 0.8px;
 }
 
 .slider-text p {
-    font-size: 1.125rem;
+    font-size: 18px;
     color: #fff;
     font-weight: 400;
     margin-bottom: 70px;
@@ -286,7 +291,7 @@ feature tab section
 ===============================================*/
 .featuredTabNav {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(140px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     gap: 30px;
     justify-content: space-between;
     align-items: center;
@@ -305,15 +310,23 @@ feature tab section
     gap: 25px;
     background-color: #dddddd;
     font-size: 16px;
-    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 75%, 50% 100%, 0 75%, 0% 75%);
-
+    clip-path: polygon(
+        0% 0%,
+        100% 0%,
+        100% 75%,
+        100% 75%,
+        50% 100%,
+        0 75%,
+        0% 75%
+    );
 }
-.featuredTabNav > li > a.active, .featuredTabNav > li > a:hover {
+.featuredTabNav > li > a.active,
+.featuredTabNav > li > a:hover {
     color: #ffffff;
-    background-color:#ff7200;
+    background-color: #ff7200;
 }
 
-.featuredTabNav > li > a>i {
+.featuredTabNav > li > a > i {
     font-size: 40px;
 }
 .featuredTabContent {
@@ -326,9 +339,18 @@ feature tab section
 }
 .featuredServiceText p {
     margin-bottom: 50px;
+    letter-spacing: 0.4px;
+}
+.featuredServiceText h2 {
+    font-size: 24px;
 }
 .featuredServiceText .btnPrimary {
     padding: 14px 32px;
+}
+@media screen and (min-width: 1200px) {
+    .featuredServiceText {
+        padding-right: 15px;
+    }
 }
 @media screen and (max-width: 1200px) {
     .featuredTabNav > li > a {
@@ -336,7 +358,7 @@ feature tab section
     }
 }
 @media screen and (max-width: 1000px) {
-    .featuredTabNav > li > a>i {
+    .featuredTabNav > li > a > i {
         font-size: 24px;
     }
     .featuredTabNav > li > a {
@@ -358,7 +380,7 @@ feature tab section
         row-gap: 20px;
         column-gap: 15px;
     }
-    .featuredTabNav > li > a>i {
+    .featuredTabNav > li > a > i {
         font-size: 20px;
     }
     .featuredTabNav > li > a {
@@ -402,21 +424,22 @@ feature-section
 
 .featured-sub-title h3 {
     margin-bottom: 35px;
-    font-size: 14px;
+    font-size: 16px;
     text-transform: uppercase;
     font-weight: 600;
+    line-height: 24px;
 }
 
 .featured-key-note > p:not(:last-child) {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 .featured-key-note > p:last-child {
     margin-bottom: 0;
 }
 
 .featured-key-note {
-    padding-top: 30px;
-    padding-bottom: 50px;
+    padding-top: 26px;
+    padding-bottom: 35px;
 }
 
 @media screen and (max-width: 768px) {
@@ -450,7 +473,7 @@ button style
     color: white;
     padding: 12px 30px;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 2.4px;
     transition: all 300ms ease-in-out;
 }
 .btnPrimary:hover {
@@ -500,25 +523,23 @@ video section
     font-size: 24px;
     font-weight: 600;
     text-transform: uppercase;
+    margin: 0;
 }
 
-
 .video-section a {
-    border: 2px solid #fff;
-    border-radius: 50%;
-    width: 70px;
-    height: 70px;
-    display: inline-block;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 25px;
+    margin-bottom: 50px;
+}
+.video-section a:hover {
+    text-decoration: none;
 }
 
 .video-section a i {
     color: #fff;
-    font-size: 2.5rem;
+    font-size: 50px;
 }
 @media screen and (max-width: 768px) {
     .video-section {
@@ -565,7 +586,7 @@ about us section
 }
 
 .itemIcon i {
-    font-size: 30px;
+    font-size: 36px;
     color: #444444;
     width: calc(100% - 2px);
     height: calc(100% - 2px);
@@ -584,13 +605,18 @@ about us section
     color: white;
     background: #ff7200;
 }
+.aboutItem .itemIcon i {
+    padding-left: 20px;
+}
 .aboutItemText h4 {
     font-size: 16px;
     margin-bottom: 25px;
+    line-height: 24px;
 }
 
 .aboutItemText p {
     margin: 0;
+    line-height: 24px;
 }
 
 .aboutUsKeyNote {
@@ -602,7 +628,7 @@ about us section
 }
 
 .skills-progress h6 {
-    font-size: 14px;
+    font-size: 13px;
     margin-bottom: 18px;
 }
 .skills-progress h6 span {
@@ -628,34 +654,36 @@ about us section
     gap: 30px;
 }
 .aboutUsTabItem {
+    font-family: 'Montserrat', sans-serif;
     text-align: center;
-    padding: 15px;
-    border: 1px solid #dddddd;
+    padding: 10px 0 20px;
+    background-color: #dddddd;
+    color: #444444;
     position: relative;
-    margin-bottom: 6px;
     border-bottom: none;
     font-weight: 500;
+    font-size: 13px;
+    clip-path: polygon(
+        0% 0%,
+        100% 0%,
+        100% 75%,
+        100% 75%,
+        50% 100%,
+        0 75%,
+        0% 75%
+    );
+    transition: all 300ms ease-in-out;
+}
+.aboutUsTabItem:hover,
+.aboutUsTabItem.active {
+    background-color: #ff7200;
+    color: #ffffff;
 }
 
-.aboutUsTabItem:before {
-    content: '';
-    position: absolute;
-    bottom: -6px;
-    left: 0;
-    height: 1px;
-    width: 51%;
-    background: #dddddd;
-    transform: skew(0deg, 6deg);
-}
-.aboutUsTabItem::after {
-    content: '';
-    position: absolute;
-    bottom: -6px;
-    right: 0;
-    height: 1px;
-    width: 50%;
-    background: #dddddd;
-    transform: skew(0deg, -6deg);
+@media screen and (min-width: 1300px) {
+    .skills-progress {
+        padding-left: 15px;
+    }
 }
 @media screen and (max-width: 768px) {
     .aboutUs {
@@ -725,19 +753,23 @@ number section ends
 }
 
 .number {
+    font-family: 'Montserrat', sans-serif;
     font-size: 45px;
     font-weight: 500;
     color: #fff;
-    font-family: 'Montserrat', sans-serif;
+    line-height: 2;
+    letter-spacing: 0.8px;
 }
 
-.icon i {
-    font-size: 18px;
+.numberItem .icon i {
+    font-size: 30px;
     color: #ff7200;
+    line-height: 2.4;
 }
 
 .numberItem p {
     font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
     margin-bottom: 0;
     color: #fff;
     font-weight: 500;
@@ -757,7 +789,7 @@ number section ends
 }
 .check-square > li {
     position: relative;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 .check-square li::before {
     top: 0;
@@ -799,15 +831,20 @@ services section
     grid-template-rows: 70px 1fr;
     gap: 15px;
     column-gap: 15px;
-    row-gap: 30px;
+    row-gap: 25px;
     align-items: center;
 }
 .itemText h4 {
     margin: 0;
     font-size: 16px;
+    line-height: 3.75;
 }
 .serviceItem > p {
     grid-column: 1/-1;
+}
+.serviceItem .itemIcon i {
+    font-size: 26px;
+    line-height: 2.5;
 }
 @media screen and (max-width: 768px) {
     .serviceSection {
@@ -843,32 +880,44 @@ team section ends
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 80%;
+    width: 86%;
     background-color: rgb(255 114 0 / 80%);
-    left: 10%;
+    left: 7%;
     padding: 20px;
     color: #fff;
     transition: all 0.2s ease-in-out;
 }
 
 .memberInfo h4 {
-    font-size: 18px;
     color: #fff;
-    margin-bottom: 15px;
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 1.5;
 }
 
 .memberInfo p {
-    font-size: 16px;
+    font-size: 14px;
     margin-bottom: 40px;
+    line-height: 1.7;
 }
 
 .social i {
-    font-size: 32px;
+    font-size: 16px;
+    width: 36px;
+    height: 36px;
+    border: 1px solid #dddddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.social i:hover {
+    background-color: #ffffff;
+    color: #ff7200;
 }
 
 .social {
     display: flex;
-    gap: 20px;
+    justify-content: space-between;
 }
 .teamMember:hover {
     cursor: pointer;
@@ -931,7 +980,7 @@ why chose us section ends
     background: #dddddd;
 }
 .whyChoseItemIcon i {
-    font-size: 15px;
+    font-size: 18px;
     color: #fff;
 }
 .whyChoseHeading.collapsed .whyChoseItemIcon i {
@@ -939,6 +988,9 @@ why chose us section ends
 }
 .whyChoseItemText {
     padding: 20px;
+}
+.whyChoseHeading h4 {
+    font-size: 13px;
 }
 @media screen and (max-width: 768px) {
     .whyChoseSection {
@@ -970,14 +1022,20 @@ projects section ends
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 2px;
+    height: 3px;
     background: #ff7200;
 }
 .projectFilterNav > li > a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    line-height: 1.84;
     padding: 22px 0;
     text-transform: uppercase;
     color: #444444;
     transition: all 100ms ease-in-out;
+}
+.projectFilterNav > li > a:hover {
+    color: #ff7200;
 }
 .projectFilterNav > li > a.active {
     color: #ff7200;
@@ -1010,7 +1068,6 @@ projects section ends
     }
 }
 
-
 .projectImg img {
     width: 100%;
     height: 100%;
@@ -1028,9 +1085,9 @@ projects section ends
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 80%;
+    width: 86%;
     background-color: rgb(255 114 0 / 90%);
-    left: 10%;
+    left: 7%;
     padding: 20px;
     color: #fff;
     transition: all 0.2s ease-in-out;
@@ -1038,15 +1095,19 @@ projects section ends
 
 .projectText .projectIcon {
     display: flex;
-    gap: 30px;
+    gap: 17px;
     margin-bottom: 40px;
 }
 
 .projectText .projectIcon > i {
-    padding: 10px;
+    display: flex;
+    width: 36px;
+    height: 36px;
     border: 1px solid #dddddd;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
+    align-items: center;
+    justify-content: center;
 }
 
 .projectText .projectIcon > i:hover {
@@ -1099,17 +1160,47 @@ review section ends
     }
 }
 .quoteIcon {
-    display: inline-block;
-    padding: 18px 27px;
-    border: 1px solid #dddddd;
+    display: flex;
+    width: 85px;
+    height: 78px;
+    background-color: rgb(255 255 255 / 5%);
     margin-bottom: 70px;
     position: relative;
     border-bottom: none;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    clip-path: polygon(
+        0% 0%,
+        100% 0%,
+        100% 85%,
+        100% 85%,
+        50% 100%,
+        0 85%,
+        0% 85%
+    );
 }
 
 .quoteIcon i {
-    font-size: 30px;
+    display: flex;
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    font-size: 36px;
     color: #ffffff;
+    background-color: rgb(255 255 255 / 0%);
+    clip-path: polygon(
+        0% 0%,
+        100% 0%,
+        100% 85%,
+        100% 85%,
+        50% 100%,
+        0 85%,
+        0% 85%
+    );
+    justify-content: center;
+    align-items: center;
 }
 
 .testimonialText {
@@ -1125,29 +1216,10 @@ review section ends
 }
 
 .testimonial h6 > span {
-    color: #dddddd;
+    color: #ffffff;
     font-size: 14px;
 }
-.quoteIcon:before {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    height: 1px;
-    width: 51%;
-    background: #dddddd;
-    transform: skew(0deg, 6deg);
-}
-.quoteIcon::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    right: 0;
-    height: 1px;
-    width: 50%;
-    background: #dddddd;
-    transform: skew(0deg, -6deg);
-}
+
 @media screen and (max-width: 768px) {
     .reviewSection {
         min-height: 460px;
@@ -1217,6 +1289,9 @@ CONTACT INFO
         background-position: left center;
     }
 }
+.contactInfo .headingWithUnderline {
+    font-size: 24px;
+}
 
 .contactForm {
     padding-top: 50px;
@@ -1266,7 +1341,8 @@ CONTACT INFO
 
 .contactInfoItem {
     display: grid;
-    grid-template-columns: 100px 1fr;
+    grid-template-columns: 58px 1fr;
+    gap: 40px;
     align-items: center;
 }
 
@@ -1286,8 +1362,10 @@ CONTACT INFO
 }
 
 .contactInfoItem .itemIcon i {
-    font-size: 20px;
-
+    font-size: 24px;
+}
+.contactInfoItem .itemIcon i:hover {
+    cursor: initial;
 }
 @media screen and (max-width: 768px) {
     .contactInfo {
