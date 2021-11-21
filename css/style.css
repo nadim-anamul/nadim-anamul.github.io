@@ -1,9 +1,29 @@
+/*--------------------------------------------------------------
+ custom property
+--------------------------------------------------------------*/
+:root {
+    --clr-primary: #ff7200;
+    --ff-body: 'Raleway', sans-serif;
+    --ff-heading: 'Montserrat', sans-serif;
+    --clr-body-text: #787878;
+    --clr-heading-text: #444444;
+}
+/*--------------------------------------------------------------
+ custom property ends
+--------------------------------------------------------------*/
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+/* Box sizing ends */
 body {
-    font-family: 'Raleway', sans-serif;
-    color: #787878;
+    font-family: var(--ff-body);
+    color: var(--clr-body-text);
     font-size: 14px;
     line-height: 30px;
-    letter-spacing: 0.42px;
     font-weight: 400;
     overflow-x: hidden;
 }
@@ -14,8 +34,8 @@ h4,
 h5,
 h6,
 strong {
-    font-family: 'Montserrat', sans-serif;
-    color: #444444;
+    font-family: var(--ff-heading);
+    color: var(--clr-heading-text);
     text-transform: uppercase;
 }
 
@@ -49,12 +69,9 @@ strong {
     bottom: 0;
     width: 50px;
     height: 3px;
-    background: #ff7200;
+    background-color: var(--clr-primary);
 }
 
-/*--------------------------------------------------------------
- header section
---------------------------------------------------------------*/
 /*--------------------------------------------------------------
  header section
 --------------------------------------------------------------*/
@@ -106,16 +123,16 @@ header.header.header-fixed {
     bottom: -1px;
     width: 100%;
     height: 3px;
-    background: #ff7200;
+    background-color: var(--clr-primary);
     opacity: 0;
     transition: opacity 0.3s;
 }
 .navbar-dark .navbar-nav .nav-link {
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--ff-heading);
     font-weight: 500;
 }
 .navbar-dark .navbar-nav .active .nav-link {
-    color: #ff7200;
+    color: var(--clr-primary);
 }
 .navbar-dark .navbar-nav .active .nav-link:after {
     opacity: 1;
@@ -125,7 +142,7 @@ header.header.header-fixed {
 }
 
 .navbar-dark .navbar-nav .nav-link:hover {
-    color: #ff7200;
+    color: var(--clr-primary);
     padding: 35px 0;
     display: inline-block;
 }
@@ -175,7 +192,7 @@ header.header.header-fixed {
     }
     .header.header-fixed .navbar-toggler-icon i {
         font-size: 40px;
-        color: #ff7200;
+        color: var(--clr-primary);
     }
 }
 
@@ -184,17 +201,14 @@ end header section
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
-end header section
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-##  Slider
+ Slider
 --------------------------------------------------------------*/
 @media (min-width: 1500px) {
-    .slider-wrapper {
+    .sliderWrapper {
         height: 935px;
     }
 
-    .slider-wrapper .item {
+    .sliderWrapper .item {
         height: 935px;
         background-size: cover;
         background-repeat: no-repeat;
@@ -233,15 +247,15 @@ end header section
         margin-right: auto;
         height: 52px;
     }
-    .slider-wrapper .owl-dots {
+    .sliderWrapper .owl-dots {
         bottom: 58px;
     }
 }
 @media (max-width: 1499px) {
-    .slider-wrapper {
+    .sliderWrapper {
         min-height: 100vh;
     }
-    .slider-wrapper .item {
+    .sliderWrapper .item {
         min-height: 100vh;
         background-size: cover;
         background-repeat: no-repeat;
@@ -250,7 +264,7 @@ end header section
         z-index: 1;
     }
 
-    .slider-wrapper .item::after {
+    .sliderWrapper .item::after {
         content: '';
         position: absolute;
         left: 0;
@@ -272,7 +286,7 @@ end header section
 
     .slider-content .slider-heading {
         font-size: 60px;
-        margin-bottom: 42px;
+        margin-bottom: 30px;
         font-weight: 700;
         color: #fff;
         text-transform: uppercase;
@@ -283,21 +297,21 @@ end header section
         font-size: 18px;
         color: #fff;
         font-weight: 400;
-        margin-bottom: 70px;
+        margin-bottom: 40px;
         text-transform: capitalize;
     }
     .btnPrimary {
         min-width: 170px;
         border-radius: 0;
         font-size: 13px;
-        background: #ff7200;
+        background-color: var(--clr-primary);
         color: white;
         padding: 12px 30px;
         text-transform: uppercase;
         letter-spacing: 2.4px;
         transition: all 300ms ease-in-out;
     }
-    .slider-wrapper .owl-dots {
+    .sliderWrapper .owl-dots {
         bottom: 46px;
     }
 }
@@ -316,7 +330,7 @@ end header section
     height: 10px;
 }
 
-.slider-wrapper .owl-dots {
+.sliderWrapper .owl-dots {
     text-align: center;
     position: absolute;
     width: 100%;
@@ -324,8 +338,8 @@ end header section
 
 .owl-carousel button.owl-dot.active {
     opacity: 1;
-    background: #ff7200;
-    border: 1px solid #ff7200;
+    background-color: var(--clr-primary);
+    border: 1px solid var(--clr-primary);
 }
 
 .owl-carousel .owl-item .slider-img img {
@@ -376,11 +390,11 @@ feature tab section
     position: relative;
 }
 .featuredTabNav > li > a {
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--ff-heading);
     font-weight: 500;
     padding: 40px 0 50px;
     text-transform: uppercase;
-    color: #444444;
+    color: var(--clr-heading-text);
     transition: all 100ms ease-in-out;
     display: flex;
     flex-direction: column;
@@ -400,7 +414,7 @@ feature tab section
 .featuredTabNav > li > a.active,
 .featuredTabNav > li > a:hover {
     color: #ffffff;
-    background-color: #ff7200;
+    background-color: var(--clr-primary);
 }
 
 .featuredTabNav > li > a > i {
@@ -561,7 +575,7 @@ button style
     min-width: 170px;
     border-radius: 0;
     font-size: 13px;
-    background: #ff7200;
+    background-color: var(--clr-primary);
     color: white;
     padding: 12px 30px;
     text-transform: uppercase;
@@ -599,7 +613,7 @@ button style ends
 /* ============================================
 video section
 ===============================================*/
-.video-section {
+.videoSection {
     background-image: url(../images/testimonial.jpg);
     min-height: 500px;
     background-size: cover;
@@ -611,7 +625,7 @@ video section
     justify-content: center;
     flex-flow: column;
 }
-.video-section h3 {
+.videoSection h3 {
     font-size: 24px;
     font-weight: 600;
     text-transform: uppercase;
@@ -619,7 +633,7 @@ video section
     letter-spacing: 1px;
 }
 
-.video-section a {
+.videoSection a {
     text-align: center;
     display: flex;
     align-items: center;
@@ -627,16 +641,16 @@ video section
     margin-bottom: 43px;
     margin-top: 75px;
 }
-.video-section a:hover {
+.videoSection a:hover {
     text-decoration: none;
 }
 
-.video-section a i {
+.videoSection a i {
     color: #fff;
     font-size: 50px;
 }
 @media screen and (max-width: 768px) {
-    .video-section {
+    .videoSection {
         min-height: 300px;
     }
 }
@@ -677,7 +691,7 @@ about us section
 
 .itemIcon i {
     font-size: 36px;
-    color: #444444;
+    color: var(--clr-heading-text);
     width: calc(100% - 2px);
     height: calc(100% - 2px);
     display: flex;
@@ -693,7 +707,7 @@ about us section
     width: calc(100%);
     height: calc(100%);
     color: white;
-    background: #ff7200;
+    background-color: var(--clr-primary);
 }
 .aboutItem .itemIcon i {
     padding-left: 22px;
@@ -739,7 +753,7 @@ about us section
 
 .progress-bar {
     height: 3px;
-    background-color: #ff7200;
+    background-color: var(--clr-primary);
 }
 .aboutUsTab {
     display: grid;
@@ -747,11 +761,11 @@ about us section
     gap: 30px;
 }
 .aboutUsTabItem {
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--ff-heading);
     text-align: center;
     padding: 8px 0 20px;
     background-color: #dddddd;
-    color: #444444;
+    color: var(--clr-heading-text);
     position: relative;
     border-bottom: none;
     font-weight: 500;
@@ -769,7 +783,7 @@ about us section
 }
 .aboutUsTabItem:hover,
 .aboutUsTabItem.active {
-    background-color: #ff7200;
+    background-color: var(--clr-primary);
     color: #ffffff;
 }
 
@@ -850,7 +864,7 @@ number section ends
 }
 
 .number {
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--ff-heading);
     font-size: 45px;
     font-weight: 500;
     color: #fff;
@@ -859,11 +873,11 @@ number section ends
 
 .numberItem .icon i {
     font-size: 30px;
-    color: #ff7200;
+    color: var(--clr-primary);
 }
 
 .numberItem p {
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--ff-heading);
     font-size: 13px;
     margin-bottom: 0;
     color: #fff;
@@ -912,7 +926,7 @@ number section ends
     }
     .numberItem .icon i {
         font-size: 24px;
-        color: #ff7200;
+        color: var(--clr-primary);
     }
 }
 /* ============================================
@@ -1007,7 +1021,7 @@ team section ends
 }
 .social i:hover {
     background-color: #ffffff;
-    color: #ff7200;
+    color: var(--clr-primary);
 }
 
 .social {
@@ -1066,7 +1080,7 @@ why chose us section ends
     align-items: center;
     transition: all 300ms ease-in-out;
     clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
-    background: #ff7200;
+    background-color: var(--clr-primary);
 }
 .whyChoseHeading.collapsed .whyChoseItemIcon {
     background: #dddddd;
@@ -1076,7 +1090,7 @@ why chose us section ends
     color: #fff;
 }
 .whyChoseHeading.collapsed .whyChoseItemIcon i {
-    color: #444444;
+    color: var(--clr-heading-text);
 }
 .whyChoseItemText {
     padding: 12px 20px 20px;
@@ -1121,21 +1135,21 @@ projects section ends
     bottom: 0;
     width: 100%;
     height: 3px;
-    background: #ff7200;
+    background-color: var(--clr-primary);
 }
 .projectFilterNav > li > a {
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--ff-heading);
     font-size: 13px;
     padding: 15px 0;
     text-transform: uppercase;
-    color: #444444;
+    color: var(--clr-heading-text);
     transition: all 100ms ease-in-out;
 }
 .projectFilterNav > li > a:hover {
-    color: #ff7200;
+    color: var(--clr-primary);
 }
 .projectFilterNav > li > a.active {
-    color: #ff7200;
+    color: var(--clr-primary);
 }
 .projectImages {
     display: grid;
@@ -1214,7 +1228,7 @@ projects section ends
 
 .projectText .projectIcon > i:hover {
     background: #fff;
-    color: #ff7200;
+    color: var(--clr-primary);
 }
 
 .projectText h4 {
@@ -1352,6 +1366,15 @@ affiliation section
     gap: 30px;
     align-items: center;
 }
+.affiliationItem img {
+    opacity: .7;
+    transition: all 300ms ease-in-out;
+}
+.affiliationItem img:hover {
+    opacity: 1;
+    transition: all 300ms ease-in-out;
+    cursor: pointer;
+}
 @media screen and (min-width: 1200px) {
     .affiliationItem:last-child {
         justify-self: end;
@@ -1386,11 +1409,18 @@ CONTACT INFO
 .contactInfo {
     padding: 143px 0 108px;
 }
-@media screen and (min-width: 1400px) {
+
+
+@media screen and (min-width: 1500px) {
     .contactInfo {
         background: url(../images/background/headset-and-clip2.jpg);
         background-repeat: no-repeat;
         background-position: left center;
+    }
+}
+@media screen and (min-width: 2000px) {
+    .contactInfo {
+        background-position: center;
     }
 }
 .contactInfo .headingWithUnderline {
@@ -1422,7 +1452,7 @@ CONTACT INFO
 }
 
 .contactForm input[type='submit'] {
-    background: #ff7200;
+    background-color: var(--clr-primary);
     color: #fff;
     display: inline-block;
     max-width: 170px;
@@ -1522,7 +1552,7 @@ Map area  end
 Footer section
 ===============================================*/
 
-.footer-top {
+.footerTop {
     padding-top: 80px;
     padding-bottom: 60px;
     background: #1a1a1a;
@@ -1546,7 +1576,7 @@ Footer section
     bottom: -1px;
     width: 30px;
     height: 3px;
-    background: #ff7200;
+    background-color: var(--clr-primary);
 }
 
 .footer-menu {
@@ -1564,7 +1594,7 @@ Footer section
 }
 
 .footer-menu li a:hover {
-    color: #ff7200;
+    color: var(--clr-primary);
 }
 
 form.news-letter {
@@ -1617,7 +1647,7 @@ form.news-letter input:focus {
     color: #ddd;
 }
 .social-media li a:hover {
-    color: #ff7200;
+    color: var(--clr-primary);
 }
 
 .footer-bottom {
@@ -1636,7 +1666,7 @@ form.news-letter input:focus {
     content: '\f590';
 }
 @media screen and (max-width: 768px) {
-    .footer-top {
+    .footerTop {
         padding-top: 60px;
         padding-bottom: 40px;
     }
